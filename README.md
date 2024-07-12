@@ -13,8 +13,15 @@ This application for playing selected in server audio file on clients computers
 ##### Debian/Ubuntu
 
 ```
-apt-get install python
-apt-get install ffmpeg
+sudo apt-get install python
+sudo apt-get install ffmpeg
+```
+
+##### Arch/Manjaro
+
+```
+sudo pacman -S python
+sudo pacman -S ffmpeg
 ```
 
 #### Setup

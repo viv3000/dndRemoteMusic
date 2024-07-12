@@ -5,6 +5,8 @@ import multiprocessing
 import time
 import sys, traceback
 
+from settings import *
+
 
 class Log:
     def __init__(self):
@@ -20,17 +22,6 @@ class Log:
             ex_type, ex, tb = sys.exc_info()
             traceback.print_tb(tb)
 
-
-class Settings:
-    def __init__(self):
-        self.musicFiles = ["musics/GoodBadEvil.mp3", "musics/LeEventLeCri.mp3"]
-        self.selectedMusicFile = self.musicFiles[0]
-        self.isRun = True
-        self.port = 9090
-        self.ip = '127.0.0.1'
-        self.timeout = 2
-
-# -------------------------------
 
 class Player:
     def __init__(self, settings):

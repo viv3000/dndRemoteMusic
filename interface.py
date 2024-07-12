@@ -1,10 +1,7 @@
-import threading
-
 from tkinter import ttk, Tk, Label
-from tkthread import tk, TkThread
-
 
 from helpers import *
+from settings import *
 
 
 class Interface():

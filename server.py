@@ -1,7 +1,9 @@
 import asyncio
+import threading
 
 from helpers import Log, Settings
 from interface import *
+from settings import *
 
 log = Log()
 

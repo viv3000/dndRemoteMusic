@@ -4,6 +4,7 @@ import asyncio
 import pdb
 
 from helpers import Log, Player, Settings, PlayerThread
+from settings import *
 
 clients = {}  # task -> (reader, writer)
 

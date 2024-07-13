@@ -29,7 +29,6 @@ sudo pacman -S ffmpeg
 ```
 git clone https://github.com/viv3000/dndRemoteMusic
 python -m pip install --upgrade pip
-python -m pip install playsound
 cd dndRemoteMusic/
 ```
 
@@ -65,7 +64,6 @@ python client.py
 ```
 git clone https://github.com/viv3000/dndRemoteMusic
 python -m pip install --upgrade pip
-pip install playsound
 cd dndRemoteMusic/
 ```
 
@@ -79,7 +77,7 @@ cd dndRemoteMusic/
 ##### Server
 
 ```
-suckDick.exe
+python server.py
 ```
 
 ##### Client

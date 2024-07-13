@@ -19,6 +19,7 @@ class Log:
         if (message!=None):
             print(message)
         if (ex != None):
+            print(ex)
             ex_type, ex, tb = sys.exc_info()
             traceback.print_tb(tb)
 
@@ -40,8 +41,13 @@ class Player:
                     stdout=subprocess.DEVNULL,
                     stderr=subprocess.STDOUT))
             else:
-                from playsound import playsound
-                self.playProcess = multiprocessing.Process(target=playsound, args=(self.file,))
+                import subprocess
+                print(r'"C:\Program Files\VideoLAN\VLC\vlc.exe" ', rf'"{self.file}"')
+                app = "vlc.exe"
+                vlcPath = os.path.join(self.settings.vlcDir, app)
+                comandLine = [app, self.file]
+                self.setPlayProcess(subprocess.Popen(comandLine, executable=vlcPath))
+                
             print(f"playFile {self.file}")
         except Exception as ex:
             Log().error(ex, "in play")

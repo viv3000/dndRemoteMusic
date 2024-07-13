@@ -46,6 +46,8 @@ def start_background_loop(loop: asyncio.AbstractEventLoop) -> None:
 
 async def main():
     settings = Settings()
+    settings.musicFiles = getMusicFiles()
+    settings.selectedMusicFile = settings.musicFiles[0]
     server = AsyncServer(settings)
 
     loop = asyncio.new_event_loop()

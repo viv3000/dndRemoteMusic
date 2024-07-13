@@ -58,6 +58,7 @@ python client.py
 
 1. Install git from [site](https://git-scm.com/download/win)
 2. Install python from [site](https://www.python.org/downloads)
+3. Install vlc from [site](https://www.videolan.org/vlc/download-windows.ru.html)
 
 #### Setup
 

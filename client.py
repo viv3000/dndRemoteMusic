@@ -4,7 +4,7 @@ import asyncio
 import pdb
 
 from helpers import Log, Player, Settings, PlayerThread
-from settings import *
+from settingsClient import *
 
 clients = {}  # task -> (reader, writer)
 
@@ -52,7 +52,7 @@ class AsyncClient:
                 await writer.wait_closed()
 
 async def main():
-    settings = Settings()
+    settings = SettingsClient()
     player = Player(settings)
     client = AsyncClient(settings, player)
 

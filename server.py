@@ -3,7 +3,7 @@ import threading
 
 from helpers import Log, Settings
 from interface import *
-from settings import *
+from settingsServer import *
 
 log = Log()
 
@@ -45,7 +45,7 @@ def start_background_loop(loop: asyncio.AbstractEventLoop) -> None:
     loop.run_forever()
 
 async def main():
-    settings = Settings()
+    settings = SettingsServer()
     settings.musicFiles = getMusicFiles()
     settings.selectedMusicFile = settings.musicFiles[0]
     server = AsyncServer(settings)
